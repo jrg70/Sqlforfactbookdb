@@ -23,7 +23,7 @@ SELECT MIN(population) AS min_pop,
        MAX(population_growth) max_pop_growth 
   FROM facts;
 """
-print(query2)
+print(pd.read_sql(query2,con))
 
 # Outlier
 query3 = """
@@ -33,7 +33,7 @@ SELECT *
                         FROM facts
                      );
 """
-print(query3) # min
+print(pd.read_sql(query3,con)) # min
 
 query4 = """
 SELECT *
@@ -42,7 +42,7 @@ SELECT *
                         FROM facts
                      );
 """
-print(query4) # max
+print(pd.read_sql(query4,con)) # max
 
 #densely populated countries where pop abover avg and area under avg without outlier world
 query5 = """
@@ -57,5 +57,5 @@ SELECT *
                 WHERE name <> 'World'
 );
 """
-print(query5)
+print(pd.read_sql(query4,con))
 
