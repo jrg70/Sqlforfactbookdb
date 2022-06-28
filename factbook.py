@@ -1,6 +1,7 @@
 import sqlite3 as sq3
 import pandas.io.sql as pds
 import pandas as pd
+# connect the databse to the factbook
 con = sq3.Connection('factbook.db') #path
 
 # enitre facts
